@@ -2,3 +2,8 @@ h1 Hello work
 
 / = ENV['BITBUCKET_KEY']
 / = ENV['BITBUCKET_SECRET']
+
+- if signed_in?
+  = current_user.email
+- else
+  = link_to 'bitbucket', user_bitbucket_omniauth_authorize_path
