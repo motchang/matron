@@ -1,0 +1,12 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'db/**/*'
+  Rails:
+    Enabled: true
+
+require:
+  - rubocop-airbnb
+
+Metrics/LineLength:
+  Enabled: false
