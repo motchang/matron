@@ -39,6 +39,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'config'
 gem 'dotenv-rails'
+gem 'omniauth-bitbucket'
 
 group :development, :test do
   gem 'bullet', github: 'flyerhzm/bullet', branch: 'master'
