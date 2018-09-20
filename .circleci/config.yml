@@ -1,0 +1,75 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # https://discuss.circleci.com/t/docker-image-cache-not-pulling-changes/8758
+      # Please do not use circleci/build-image:latest!! Generally, it’s a bad idea to use the latest
+      # tag of a Docker image in any case. Using a specific tag guarantees that
+      # you are using the same version of the container image. For more
+      # information on why we don’t recommend latest, check out these blog posts below:
+       - image: "potepancamp/matron:20180920"
+         environment:
+           MATRON_DATABASE_HOST: localhost
+           MATRON_DATABASE_USERNAME: ubuntu
+           RAILS_ENV: test
+       - image: circleci/postgres:10-alpine-ram
+         environment:
+          POSTGRES_USER: ubuntu
+          POSTGRES_DB: matron_test
+    working_directory: ~/repo
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - restore_cache:
+          keys:
+          - v1-npm-packages-{{ checksum "yarn.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-npm-packages-
+      - run:
+          name: install dependencies (ruby)
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run:
+          name: install dependencies (node)
+          command: |
+            yarn
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v1-npm-packages-{{ checksum "yarn.lock" }}
+      # Database setup
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:migrate:reset
+      # run tests!
+      - run:
+          name: run tests
+          command: |
+            bundle exec rspec --format progress \
+                            --format RspecJunitFormatter \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress
+      # collect reports
+      - store_test_results:
+          path: /tmp/test-results
+      - store_test_results:
+          path: ./tmp/screenshots
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
+      - store_artifacts:
+          path: ./tmp/screenshots
+          destination: screenshots
