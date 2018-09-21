@@ -1,7 +1,6 @@
 # frozen_string_literal: true
-class MainsController < ApplicationController
 
+class MainsController < ApplicationController
   # GET /mains
-  def index
-  end
+  def index; end
 end
