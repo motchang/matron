@@ -2,11 +2,12 @@ AllCops:
   TargetRubyVersion: 2.5
   Exclude:
     - 'db/**/*'
-  Rails:
-    Enabled: true
 
-require:
-  - rubocop-airbnb
+Rails:
+  Enabled: true
 
 Metrics/LineLength:
+  Enabled: false
+
+Style/Documentation:
   Enabled: false
