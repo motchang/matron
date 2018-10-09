@@ -6,6 +6,7 @@
 if Rails.env.development?
   require 'annotate'
 
+  # rubocop:disable Metric/BlockLength
   task :set_annotation_options do
     # You can override any of these by setting an environment variable of the
     # same name.
@@ -52,6 +53,7 @@ if Rails.env.development?
       'with_comment'              => true
     )
   end
+  # rubocop:enable Metric/BlockLength
 
   Annotate.load_tasks
 end
