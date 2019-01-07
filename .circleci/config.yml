@@ -26,14 +26,14 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v2-dependencies-{{ checksum "Gemfile.lock" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - v2-dependencies-
       - restore_cache:
           keys:
-          - v1-npm-packages-{{ checksum "yarn.lock" }}
+          - v2-npm-packages-{{ checksum "yarn.lock" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-npm-packages-
+          - v2-npm-packages-
       - run:
           name: install dependencies (ruby)
           command: |
@@ -45,11 +45,11 @@ jobs:
       - save_cache:
           paths:
             - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+          key: v2-dependencies-{{ checksum "Gemfile.lock" }}
       - save_cache:
           paths:
             - ./node_modules
-          key: v1-npm-packages-{{ checksum "yarn.lock" }}
+          key: v2-npm-packages-{{ checksum "yarn.lock" }}
       # Database setup
       - run: bundle exec rake db:create
       - run: bundle exec rake db:migrate:reset
