@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/flyerhzm/bullet.git
-  revision: 2e83c5bcd83537e41d00a9067a60e367ca011051
+  revision: 11ef24fd486d34af70b631843c349965b65323cb
   branch: master
   specs:
     bullet (5.9.0)
@@ -128,7 +128,7 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.6.0)
-    i18n (1.5.2)
+    i18n (1.5.3)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
     jbuilder (2.8.0)
