@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/flyerhzm/bullet.git
-  revision: 2e83c5bcd83537e41d00a9067a60e367ca011051
+  revision: 74d7582de2a4654aacd5573dc84cc7760b0dc37d
   branch: master
   specs:
-    bullet (5.9.0)
+    bullet (6.0.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
 
@@ -65,7 +65,7 @@ GEM
     builder (3.2.3)
     byebug (10.0.2)
     coderay (1.1.2)
-    concurrent-ruby (1.1.4)
+    concurrent-ruby (1.1.5)
     config (1.7.1)
       activesupport (>= 3.0)
       deep_merge (~> 1.2.1)
@@ -128,7 +128,7 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.6.0)
-    i18n (1.5.2)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
     jbuilder (2.8.0)
