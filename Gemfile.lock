@@ -124,8 +124,7 @@ GEM
     faker (2.5.0)
       i18n (~> 1.6.0)
     ffi (1.11.1)
-    foreman (0.85.0)
-      thor (~> 0.19.1)
+    foreman (0.86.0)
     gimei (0.3.0)
       romaji
     globalid (0.4.2)
@@ -287,7 +286,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     temple (0.8.0)
-    thor (0.19.4)
+    thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
     tzinfo (1.2.5)
