@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/flyerhzm/bullet.git
-  revision: 5d0d21d2f9be55ffccbd47def40e02212fda78e7
+  revision: 6b6575301dc74c6eb37b76d219df55e12932d538
   branch: master
   specs:
-    bullet (6.0.2)
+    bullet (6.1.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
 
@@ -289,7 +289,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    tzinfo (1.2.5)
+    tzinfo (1.2.6)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
