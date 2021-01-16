@@ -2,11 +2,11 @@ AllCops:
   TargetRubyVersion: 2.5
   Exclude:
     - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'bin/setup'
+    - 'bin/update'
 
-Rails:
-  Enabled: true
-
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Style/Documentation:
