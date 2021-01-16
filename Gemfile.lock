@@ -130,7 +130,7 @@ GEM
       i18n (>= 1.6, < 2)
     ffi (1.14.2)
     foreman (0.87.0)
-    gimei (0.4.0)
+    gimei (0.5.1)
       romaji
     globalid (0.4.2)
       activesupport (>= 4.2.0)
