@@ -44,7 +44,7 @@ gem 'devise'
 gem 'omniauth-bitbucket'
 
 group :development, :test do
-  gem 'bullet', github: 'flyerhzm/bullet', branch: 'master'
+  gem 'bullet'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'faker'
