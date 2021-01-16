@@ -135,7 +135,7 @@ GEM
       romaji
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    hashie (3.6.0)
+    hashie (4.1.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
@@ -162,8 +162,8 @@ GEM
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
-    omniauth (1.9.0)
-      hashie (>= 3.4.6, < 3.7.0)
+    omniauth (1.9.1)
+      hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
     omniauth-bitbucket (0.0.2)
       multi_json (~> 1.7)
@@ -191,7 +191,7 @@ GEM
     public_suffix (3.1.1)
     puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.0.8)
+    rack (2.2.3)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
