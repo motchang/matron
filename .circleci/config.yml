@@ -12,7 +12,7 @@ jobs:
       # tag of a Docker image in any case. Using a specific tag guarantees that
       # you are using the same version of the container image. For more
       # information on why we don’t recommend latest, check out these blog posts below:
-       - image: "circleci/ruby:2.5.3-stretch-node-browsers"
+       - image: "circleci/ruby:2.6.6-stretch-node-browsers"
          environment:
            MATRON_DATABASE_HOST: localhost
            MATRON_DATABASE_USERNAME: ubuntu
