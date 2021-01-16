@@ -128,7 +128,7 @@ GEM
       railties (>= 4.2.0)
     faker (2.10.1)
       i18n (>= 1.6, < 2)
-    ffi (1.11.3)
+    ffi (1.14.2)
     foreman (0.87.0)
     gimei (0.4.0)
       romaji
@@ -139,7 +139,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
-    listen (3.2.1)
+    listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.0)
@@ -222,8 +222,8 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (3.0.0)
     rake (13.0.3)
-    rb-fsevent (0.10.3)
-    rb-inotify (0.10.0)
+    rb-fsevent (0.10.4)
+    rb-inotify (0.10.1)
       ffi (~> 1.0)
     react_on_rails (11.3.0)
       addressable
@@ -341,7 +341,7 @@ DEPENDENCIES
   foreman
   gimei
   jbuilder (~> 2.10)
-  listen (>= 3.0.5, < 3.3)
+  listen (>= 3.0.5, < 3.5)
   omniauth-bitbucket
   pg (>= 0.18, < 2.0)
   pry-byebug
