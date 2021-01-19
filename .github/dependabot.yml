@@ -6,3 +6,11 @@ updates:
     interval: daily
     time: "20:00"
   open-pull-requests-limit: 10
+  rebase-strategy: auto
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "18:00"
+  open-pull-requests-limit: 10
+  rebase-strategy: auto
