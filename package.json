@@ -2,7 +2,7 @@
   "name": "matron",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.6.0"
+    "@rails/webpacker": "5.2.1"
   },
   "devDependencies": {
     "webpack-dev-server": "3.11.2"
