@@ -41,7 +41,9 @@ gem 'config'
 gem 'dotenv-rails'
 
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-bitbucket'
+gem 'omniauth-rails_csrf_protection'
 
 group :development, :test do
   gem 'bullet'
