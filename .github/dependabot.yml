@@ -7,7 +7,8 @@ updates:
     time: "20:00"
   open-pull-requests-limit: 10
   rebase-strategy: auto
-  automerged_updates: "all"
+  reviewers:
+    - "motchang"
 - package-ecosystem: npm
   directory: "/"
   schedule:
@@ -15,4 +16,5 @@ updates:
     time: "18:00"
   open-pull-requests-limit: 10
   rebase-strategy: auto
-  automerged_updates: "all"
+  reviewers:
+    - "motchang"
