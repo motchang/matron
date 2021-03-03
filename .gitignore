@@ -185,6 +185,8 @@ capybara-*.html
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
+/public/assets/
+/public/packs/
 /coverage/
 /spec/tmp
 *.orig
@@ -535,3 +537,10 @@ typings/
 .serverless
 
 
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
