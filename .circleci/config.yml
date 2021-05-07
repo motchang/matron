@@ -17,7 +17,7 @@ jobs:
            MATRON_DATABASE_HOST: localhost
            MATRON_DATABASE_USERNAME: ubuntu
            RAILS_ENV: test
-       - image: circleci/postgres:10-alpine-ram
+       - image: circleci/postgres:12-alpine-ram
          environment:
           POSTGRES_USER: ubuntu
           POSTGRES_DB: matron_test
