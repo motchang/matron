@@ -1,6 +1,6 @@
 # -*- mode: dockerfile -*-
 
-FROM ruby:2.6.7-stretch
+FROM ruby:2.6.8-stretch
 
 ENV ENTRYKIT_VERSION 0.4.0
 
